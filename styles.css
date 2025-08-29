@@ -85,11 +85,11 @@ a {
     color: rgb(255, 255, 255);
   }
                 /* Начальный текст */
-.Text_h1{
+.text_h1{
     color: rgb(255, 255, 255);
     text-align: center;
     position: relative;
-    margin-top: 171.1px;
+    margin-top: 171px;
     font-family: "Bellota";
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -97,7 +97,7 @@ a {
 }
 
                 /* Начальный текст */
-.Text_h2{
+.text_h2{
     color: rgb(255, 255, 255);
     text-align: center;
     position: relative;
