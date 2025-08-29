@@ -39,18 +39,26 @@ body{
     margin-inline: 0.5px;
     text-transform: uppercase;
     position: relative;
-    color: #fff;
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* Эффект подсветки при наведении */
-.menu li:hover {
+/* Стили для ссылок в меню */
+.menu li a {
+    color: white;              /* белый цвет текста */
+    text-decoration: none;     /* убираем подчёркивание */
+    display: inline-block;     /* чтобы hover работал ровно */
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении */
+.menu li a:hover {
     color: #fff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
+/* Подсветка снизу */
 .menu li::after {
     content: '';
     position: absolute;
@@ -79,11 +87,7 @@ body{
       opacity: 1;
       transform: translateX(0);
     }
-  }
-
-a {
-    color: rgb(255, 255, 255);
-  }
+}
                 /* Начальный текст */
 .Text_h1{
     color: rgb(255, 255, 255);
@@ -144,6 +148,7 @@ nav ul {
     gap: 1.5rem;
     margin-top: 1.5rem;
     animation: slideUp 0.8s ease-out 0.3s both;
+    color: white;
 }
   
 nav a {
@@ -157,6 +162,7 @@ nav a {
   
 nav a:hover {
     background-color: rgba(255,255,255,0.2);
+    color: white;
 }
 
 .intro {
