@@ -1,20 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <title>Мой сайт</title>
 </head>
 <body>
+                            <!-- nav menu -->
+    <header class="header">
+
+        <ul class="menu">
+            <li><a href="#top">Главная</a></li>
+            <li><a href="#section2">Традиции</a></li>
+            <li><a href="#section3">Современность</a></li>
+            <li><a href="#section4">Искусство</a></li>
+            <li><a href="#footer">Отзыв</a></li>
+        </ul>
+        
+    </header> 
+                            <!-- main screen -->
+<main>
+
     <section class="section1">
 
-        <img class="home-screen" src="assets/section1_head.jpg" alt="">
+        <img class="photo1" src="assets/section1_head.jpg" alt="">
 
-        <div class="hometext-inrto">
-            <h1 class="text_h1">Культура Китая</h1>
-            <h2 class="text_h2">Няняня</h2>
+        <div class="container">
+            <h1 class="text_h1">Культура Китая: традиции и современность</h1>
+            <h2 class="text_h2">Добро пожаловать в мир китайской культуры!</h2>
         </div>
+
     </section>
+
+    <script src="{% static 'js/scri.js' %}"></script>
+    <script src="{% static 'js/scrip.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>

@@ -111,6 +111,14 @@ body{
     font-size: 2rem;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* выравнивает по вертикали */
+    height: 100vh;
+    animation: slideUp 0.8s ease-out 0.5s both;
+}
  
 .Text2_h1{
     color: rgb(255, 255, 255);
@@ -165,12 +173,6 @@ nav a:hover {
     color: white;
 }
 
-.intro {
-    padding-bottom: 15rem;
-    text-align: center;
-    animation: slideUp 0.8s ease-out 0.5s both;
-}
-
                   /* section2! */
 .section2{
     margin-top:115.5px;
@@ -181,6 +183,13 @@ nav a:hover {
 }
 
 .photo2{
+    height:0;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: sticky;
+    animation: fadeIn 1s ease-out;
     position: absolute;
     margin-top: 14px;
     margin-bottom: 14px;
@@ -255,7 +264,7 @@ nav a:hover {
     justify-content: center;
 }
 
-.Text_card{
+/* .Text_card{
     font-size: 0.85rem;
     line-height: 1.5;
     margin-bottom: 1rem;
@@ -312,10 +321,10 @@ nav a:hover {
 #c4 {
     background: linear-gradient(135deg, #8583ec 0%, #534f9a 100%);
     z-index: 1;
-}
+} */
 
                 /* Анимация при наведении на контейнер */
-.main1:hover #c1 {
+/* .main1:hover #c1 {
     transform: translateX(-150px) rotate(-15deg);
 }
 
@@ -329,10 +338,10 @@ nav a:hover {
 
 .main1:hover #c4 {
     transform: translateX(150px) rotate(15deg);
-}
+} */
 
                 /* Анимация при наведении на конкретную карточку */
-#c1:hover {
+/* #c1:hover {
     transform: translateX(-150px) scale(1.1) rotate(0deg) !important;
     z-index: 10;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -354,10 +363,10 @@ nav a:hover {
     transform: translateX(150px) scale(1.1) rotate(0deg) !important;
     z-index: 10;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
+} */
 
                 /* Контент карточек */
-.card-content {
+/* .card-content {
     opacity: 0;
     transition: opacity 0.3s ease;
     text-align: center;
@@ -367,7 +376,7 @@ nav a:hover {
 
 .card:hover .card-content {
     opacity: 1;
-}
+} */
 
                 /* Секция3 */
 
