@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    background: #f8f4ef; /* бежевый фон */
+    color: #2c3e30; /* темно-зеленый текст */
+}
+
+.banner {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(190, 210, 190, 0.3) 0%, rgba(245, 240, 230, 0.3) 100%);
+    z-index: 1;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    color: #2c3e30;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    color: #5a6d5e;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+}
+
+.btn-primary {
+    background: #8aa386; /* мягкий зеленый */
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #7a9276;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(138, 163, 134, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #5a6d5e;
+    border: 1px solid #8aa386;
+}
+
+.btn-secondary:hover {
+    background: rgba(138, 163, 134, 0.1);
+    transform: translateY(-2px);
+}
+
+        /* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+.animated {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; opacity: 0; }
+.delay-2 { animation-delay: 0.4s; opacity: 0; }
+.delay-3 { animation-delay: 0.6s; opacity: 0; }
+
+        /* Адаптивность */
+    @media (max-width: 768px) {
+h1 { font-size: 2.5rem; }
+    .subtitle { font-size: 1.1rem; }
+    .btn { padding: 0.8rem 2rem; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    .buttons { flex-direction: column; align-items: center; }
+    .btn { width: 100%; max-width: 250px; }
+}

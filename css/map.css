@@ -1,0 +1,122 @@
+:root{
+    --accent: #ff6b6b;
+    --accent-2: #4d79ff;
+    --bg: #f7f8fb;
+    --muted: #6b6f76;
+    --region-fill: #e6eefc;
+    --region-stroke: #c6d7ff;
+    --selected: #ffd6d6;
+}
+.wrap{
+    max-width:1100px;
+    margin:28px auto;
+    padding:18px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 8px 30px rgba(20,30,50,0.08);
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+}
+
+/* SVG container */
+.map-container{
+    flex:1 1 720px;
+    min-width:300px;
+    position:relative;
+}
+
+svg{
+    width:100%;
+    height:auto;
+    display:block;
+    user-select:none;
+}
+
+  /* regions default style */
+.region{
+    fill:var(--region-fill);
+    stroke:var(--region-stroke);
+    stroke-width:2;
+    transition: transform .12s ease, fill .12s ease, filter .12s ease;
+    cursor:pointer;
+}
+.region:focus{
+    outline:none;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.08));
+}
+
+  /* hover */
+.region:hover{
+    transform:translateY(-4px);
+    fill: #d6e6ff;
+}
+
+  /* selected */
+.region.selected{
+    fill: var(--selected);
+    stroke: var(--accent);
+    stroke-width:3;
+    transform:translateY(-6px) scale(1.02);
+}
+
+  /* city markers (circles) */
+.city{
+    fill:var(--accent-2);
+    stroke:#fff;
+    stroke-width:2;
+    cursor:pointer;
+}
+.city:hover{
+    transform:scale(1.15);
+}
+
+  /* tooltip */
+.tooltip{
+    position:fixed;
+    pointer-events:none;
+    background:linear-gradient(180deg, rgba(255,255,255,0.98), white);
+    padding:10px 12px;
+    border-radius:8px;
+    box-shadow:0 6px 18px rgba(20,30,50,0.12);
+    border:1px solid rgba(10,20,40,0.05);
+    font-size:14px;
+    color:#111;
+    min-width:160px;
+    transform:translate(-50%, -120%);
+    transition:opacity .12s ease, transform .12s ease;
+    opacity:0;
+    z-index:40;
+}
+.tooltip.show{ opacity:1; transform:translate(-50%,-140%); }
+
+.tooltip__title{
+    font-weight:700;
+    margin-bottom:6px;
+}
+  .tooltip__desc{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.25;
+}
+
+  /* right panel */
+.info{
+    width:300px;
+    min-width:220px;
+}
+.info h3{ margin:0 0 8px 0; font-size:18px; }
+.info .placeholder{
+    background:linear-gradient(90deg,#f2f6ff,#fff);
+    padding:12px;
+    border-radius:8px;
+    border:1px solid rgba(10,20,40,0.04);
+    color:var(--muted);
+}
+
+  /* small responsive */
+@media (max-width:900px){
+    .wrap{ flex-direction:column; }
+    .info{ width:100%; }
+    .map-container{ order:1; }
+}

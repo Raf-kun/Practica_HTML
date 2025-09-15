@@ -1,0 +1,12 @@
+.line_container {
+    margin: 100px;
+}
+
+.line {
+    position: absolute;
+    
+    width: 15px;
+    height: 1000px;
+    background-color: black;
+}
+
