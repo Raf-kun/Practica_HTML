@@ -107,14 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Сброс выбора при клике вне карты
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.region') && !e.target.closest('.city') && !e.target.closest('.map-container')) {
-      resetSelection();
-      tooltip.style.opacity = '0';
-    }
-  });
-
   // Предотвращаем изменение размера SVG при клике
   const svg = document.querySelector('svg');
   svg.style.flexShrink = '0';

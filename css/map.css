@@ -16,6 +16,7 @@
     padding: 15px;
     position: relative;
     overflow: hidden;
+    cursor: default;
 }
 
 .container-map {
@@ -41,6 +42,7 @@
     align-items: center;
     background: linear-gradient(160deg, #1e3a5f 0%, #2d4a76 100%);
     position: relative;
+    cursor: default;
 }
 
 /* Компактный размер SVG */
@@ -61,6 +63,7 @@
     justify-content: center;
     position: relative;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: default;
 }
 
 .info-box::before {
@@ -83,41 +86,43 @@
 }
     
 .info-content {
+    min-height: 340.6px;
     padding: 18px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     box-shadow: 
         0 4px 12px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
-    min-height: 200px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
      
 .placeholder {
-    color: #a0aec0;
     font-style: italic;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.0);;
 }
 
 /* Улучшенные стили для лучшей читаемости */
 .region {
     fill: rgba(116, 142, 255, 0.4);
     stroke: #4a6bff;
-    stroke-width: 1.5;
+    stroke-width: 3px;
     transition: all 0.3s ease;
     cursor: pointer;
+    transform: scale(1.06);
 }
 
 .region:hover, .region:focus {
     fill: rgba(74, 107, 255, 0.6);
     stroke: #3a5bef;
-    stroke-width: 2;
+    stroke-width: 3px;
+    transform: scale(1.10);
 }
 
 .city {
@@ -132,13 +137,12 @@
     fill: rgba(255, 87, 87, 0.8);
     stroke: #ff3838;
     stroke-width: 2.2;
-    r: 9;
+    r: 15;
 }
 
-/* Улучшенные текстовые метки */
 .text-label {
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 400;
     pointer-events: none;
     fill: #ffffff;
     text-shadow: 
@@ -209,6 +213,7 @@
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
+
 
 .region-name {
     color: #4a6bff;
