@@ -9,13 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Dosis:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index_styles.css">
-    <link rel="stylesheet" href="css/present_styles.css">
-    <link rel="stylesheet" href="css/traditions_styles.css">
+    <!-- <link rel="stylesheet" href="css/present_styles.css">
+    <link rel="stylesheet" href="css/traditions_styles.css"> -->
     <link rel="stylesheet" href="css/map.css">
     <title>Мой сайт</title>
 </head>
 <body>
-                            <!-- nav menu -->
+
     <header class="header">
 
         <ul class="menu">
@@ -26,71 +26,78 @@
             <li><a href="#footer">Отзыв</a></li>
         </ul>
         
-    </header> 
-                            <!-- main screen -->
-    <main>
-        <div class="follower"></div>
-            <section class="section1">
+    </header>
+
+      <section class="section1">
                 <img class="photo1" src="assets/section1_head.jpg" alt="">
                     <div class="container">
                         <h1 class="text_h1">Культура Китая: традиции и современность</h1>
                         <h2 class="text_h2">Добро пожаловать в мир китайской культуры!</h2>
                     </div>
             </section>
-    </main>
 
-    <div class="map">
-        <div class="wrap" role="main">
-    <div class="map-container" aria-label="Карта с регионами">
-      <!-- Пример SVG — упрощённая схематическая карта.
-           Замените пути и id на реальные пути из вашей SVG-карты.
-           Каждый элемент должен иметь class="region" или class="city"
-           и data-name / data-feature атрибуты.
-      -->
-      <svg viewBox="0 0 1000 600" role="img" aria-labelledby="mapTitle">
-        <title id="mapTitle">Пример интерактивной карты</title>
+
+<div class="body-map">
+  <div class="container-map">
+    <div class="map-container" aria-label="Интерактивная карта Китая">
+      <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mapTitle">
 
         <!-- Большая "Сычуань" (пример полигона) -->
         <path id="sichuan" class="region" tabindex="0"
               d="M200 280 L280 260 L320 300 L380 320 L360 380 L300 410 L240 360 Z"
               data-name="Сычуань"
-              data-feature="Панды и острая кухня"
+              data-description="Провинция на юго-западе Китая, известная своей острой кухней и как естественная среда обитания больших панд. Столица — Чэнду."
+              data-population="83 млн"
+              data-area="485,000 км²"
+              data-capital="Чэнду"
               />
 
         <!-- "Пекин" — город (круг) -->
         <circle id="beijing" class="city" tabindex="0"
-                cx="620" cy="110" r="12"
+                cx="620" cy="110" r="8"
                 data-name="Пекин"
-                data-feature="Столица, исторические памятники"
+                data-description="Столица Китая, политический и культурный центр страны. Известен Запретным городом, Храмом Неба и Великой Китайской стеной."
+                data-population="21.5 млн"
+                data-area="16,411 км²"
+                data-capital="—"
                 />
 
         <!-- "Шанхай" — город -->
         <circle id="shanghai" class="city" tabindex="0"
-                cx="760" cy="220" r="10"
+                cx="760" cy="220" r="7"
                 data-name="Шанхай"
-        data-feature="Финансовый центр, небоскрёбы"
+                data-description="Крупнейший финансовый и торговый центр Китая. Знаменит набережной Вайтань, районом Пудун с небоскрёбами и оживлённой торговой улицей Нанкинлу."
+                data-population="24.2 млн"
+                data-area="6,341 км²"
+                data-capital="—"
                 />
 
         <!-- "Гуандун" (юг) -->
         <path id="guangdong" class="region" tabindex="0"
               d="M520 380 L620 400 L700 420 L720 480 L640 520 L560 500 L520 460 Z"
               data-name="Гуандун"
-              data-feature="Кантонская кухня и море"
+              data-description="Провинция на юге Китая, экономический двигатель страны. Родина кантонской кухни. Столица — Гуанчжоу."
+              data-population="113.5 млн"
+              data-area="179,800 км²"
+              data-capital="Гуанчжоу"
               />
 
         <!-- "Синьцзян" (северо-запад) -->
         <path id="xinjiang" class="region" tabindex="0"
               d="M40 60 L220 40 L260 80 L220 140 L140 140 L80 120 Z"
               data-name="Синьцзян"
-              data-feature="Богатая кочевая культура, пустыни"
+              data-description="Автономный район на северо-западе Китая, известный своими пустынями, горами и богатой кочевой культурой. Столица — Урумчи."
+              data-population="25.8 млн"
+              data-area="1,664,900 км²"
+              data-capital="Урумчи"
               />
 
-        <!-- Labels (необязательно) -->
-        <text x="280" y="260" font-size="12" fill="#334" opacity="0.7">Сычуань</text>
-        <text x="600" y="100" font-size="12" fill="#334" opacity="0.7">Пекин</text>
-        <text x="740" y="210" font-size="12" fill="#334" opacity="0.7">Шанхай</text>
-        <text x="620" y="390" font-size="12" fill="#334" opacity="0.7">Гуандун</text>
-        <text x="120" y="80" font-size="12" fill="#334" opacity="0.7">Синьцзян</text>
+        <!-- Labels с улучшенной читаемостью -->
+        <text x="280" y="260" class="text-label" text-anchor="middle">Сычуань</text>
+        <text x="600" y="100" class="text-label" text-anchor="middle">Пекин</text>
+        <text x="740" y="210" class="text-label" text-anchor="middle">Шанхай</text>
+        <text x="620" y="390" class="text-label" text-anchor="middle">Гуандун</text>
+        <text x="120" y="80" class="text-label" text-anchor="middle">Синьцзян</text>
       </svg>
 
       <!-- Tooltip -->
@@ -100,14 +107,44 @@
       </div>
     </div>
 
-    <aside class="info" aria-label="Информация о выбранном регионе">
-      <h3>Выбранный регион</h3>
-      <div id="info-box" class="placeholder">
-        Наведите мышь или кликните на регион — тут появится подробная информация.
+    <aside class="info-box" aria-label="Информация о выбранном регионе">
+      <h3 id="info-title">Информация о регионе</h3>
+      <div class="info-content" id="info-content">
+        <div class="placeholder">
+          Выберите регион или город на карте — здесь появится подробная информация.
+        </div>
+        
+        <!-- Динамическое содержимое будет добавляться сюда -->
+        <div id="region-info" style="display: none;">
+          <div class="info-header">
+            <h4 id="region-name" class="region-name"></h4>
+            <div class="region-type" id="region-type"></div>
+          </div>
+          
+          <div class="info-stats">
+            <div class="stat-item">
+              <span class="stat-label">Население:</span>
+              <span class="stat-value" id="stat-population"></span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Площадь:</span>
+              <span class="stat-value" id="stat-area"></span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Столица:</span>
+              <span class="stat-value" id="stat-capital"></span>
+            </div>
+          </div>
+          
+          <div class="info-description">
+            <p id="region-description"></p>
+          </div>
+        </div>
       </div>
     </aside>
-        </div>
-    </div>
+  </div>
+</div>
+
                         <!-- fotter -->
 
 <!-- <footer class="footer" id="footer">
