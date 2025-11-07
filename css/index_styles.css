@@ -3,9 +3,14 @@ html{
 }
 body{
     margin: 0px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background: ('/assets/section2.jpg') no-repeat center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
     height: 100vh;
-    background: #111;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 .header{
     height:0;
@@ -16,6 +21,42 @@ body{
     position: sticky;
     animation: fadeIn 1s ease-out;
     z-index: 1;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+section {
+    min-height: 100vh;
+    padding: 100px 10%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+  /* Изображения */
+img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 .photo1{
     position: absolute;
