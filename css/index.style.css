@@ -1,12 +1,12 @@
-  body {
+body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     color: white;
-    background: url('https://images.unsplash.com/photo-1524230572899-a752b3835840') no-repeat center fixed;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center fixed;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center 0;
-    height: 100vh;
+    background-position: down;
+    height: 50vh;
     overflow-x: hidden;
 }
 
