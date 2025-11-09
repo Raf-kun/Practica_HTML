@@ -4,13 +4,14 @@ html{
 
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
     background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center bottom;
     background-size: cover;
     background-attachment: fixed;
     color: white;
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
 }
 
 header{
@@ -18,6 +19,8 @@ header{
     justify-content: center;
     align-items: center;
     text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
 }
 
 img {
@@ -54,11 +57,11 @@ img {
     margin-top: 0;
     padding: 0.5em;
     background-color: rgba(0, 0, 0, 0.4);
+
 }
 .menu li {
     animation: slideUp 0.8s ease-out 0.5s both;
     font-size: 1.3rem;
-    font-family: "Bellota", cursive, sans-serif;
     display: inline-block;
     margin-inline: 0.5px;
     text-transform: uppercase;
@@ -160,14 +163,16 @@ nav a:hover {
     position: relative;
     margin-bottom: 0.25em;
     padding-top: 35px;
-    font-family: "Bellota";
+    font-family: "Comfortaa";
+    font-style: normal;
 }
 
 .text {
     color: rgb(255, 255, 255);
     text-align: right;
     position: relative;
-    font-family: "Bellota";
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
     font-size: 1.5rem;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     margin: 3px 20px 3px 0;
@@ -197,6 +202,17 @@ nav a:hover {
     font-size: 18px;
     line-height: 2;
     color: #ffffff;
+    font-family: "Comfortaa";
+    font-style: normal;
+}
+.text2_h2{
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+    margin-bottom: 0.25em;
+    padding-top: 35px;
 }
 
                     /* Секция 1*/
@@ -247,16 +263,20 @@ nav a:hover {
 
                     /* Секция 2*/
 .section2 {
-    min-height: 100vh;
-    padding: 100px 10%;
+    min-height: 50vh;
+    padding: 50px 10%;
     background: rgba(0,0,0,0.5);
     backdrop-filter: blur(4px);
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
 }
 
 .fade-in {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
 }
 
 .fade-in.visible {
@@ -268,3 +288,4 @@ nav a:hover {
   display: flex;
   justify-content: center;
 }
+
