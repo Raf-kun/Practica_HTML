@@ -137,11 +137,9 @@ nav a:hover {
 .text_h1{
     color: rgb(255, 255, 255);
     text-align: center;
-    
-    margin-top: 171px;
+    margin-top: 25rem;
     font-family: "Bellota";
     font-size: 2.5rem;
-    margin-bottom: 1rem;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
@@ -194,7 +192,14 @@ nav a:hover {
     user-select: none;
 }
 
+.p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 2;
+    color: #ffffff;
+}
 
+                    /* Секция 1*/
 .section1{
     display: flex;
     flex-direction: column;
@@ -240,7 +245,8 @@ nav a:hover {
     }
 }
 
-.section3 {
+                    /* Секция 2*/
+.section2 {
     min-height: 100vh;
     padding: 100px 10%;
     background: rgba(0,0,0,0.5);
@@ -256,4 +262,9 @@ nav a:hover {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.img-styles {
+  display: flex;
+  justify-content: center;
 }
