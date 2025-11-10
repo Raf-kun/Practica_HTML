@@ -1,12 +1,217 @@
-.line_container {
-    margin: 100px;
+        body {
+            margin: 0;
+            background: #0f0f0f;
+            color: white;
+            font-family: "Comfortaa", sans-serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+.menu {
+    margin-top: 0;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+.menu li {
+    animation: slideUp 0.8s ease-out 0.5s both;
+    font-size: 1.3rem;
+    display: inline-block;
+    margin-inline: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.line {
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.menu li::after {
+    content: '';
     position: absolute;
-    
-    width: 15px;
-    height: 1000px;
-    background-color: black;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+.menu li:hover::after {
+    width: 100%;
 }
 
+.menu li:nth-child(1) { animation-delay: 0.3s; }
+.menu li:nth-child(2) { animation-delay: 0.5s; }
+.menu li:nth-child(3) { animation-delay: 0.7s; }
+.menu li:nth-child(4) { animation-delay: 1.2s; }
+.menu li:nth-child(5) { animation-delay: 1.5s; }
+
+@keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+                /* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    animation: slideUp 0.8s ease-out 0.3s both;
+    color: white;
+}
+  
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+  
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+}
+
+.section {
+    padding: 60px 10%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin: 40px auto;
+     width: 80%;
+    backdrop-filter: blur(4px);
+}
+
+h2 {
+    font-family: "Bellota";
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .img-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 600px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+
+        /* интересное — интерактивные карточки */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            padding: 20px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.15);
+        }
+
+.card-title {
+    font-size: 1.5rem;
+    font-family: "Bellota";
+}
+
+.lantern-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+.lantern {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background: rgba(255, 200, 100, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 150, 0, 0.7);
+    animation: floatUp 6s linear infinite;
+}
+.lantern:nth-child(1) { left: 20%; animation-delay: 0s; }
+.lantern:nth-child(2) { left: 50%; animation-delay: 2s; }
+.lantern:nth-child(3) { left: 80%; animation-delay: 4s; }
+
+
+@keyframes floatUp {
+    0% { transform: translateY(100px) scale(1); opacity: 0.7; }
+    100% { transform: translateY(-200px) scale(1.1); opacity: 0; }
+}
+
+
+            /* Тут фонарики*/
+.lanterns {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+.lantern {
+    width: 40px;
+    height: 60px;
+    background: radial-gradient(circle, #ffdf8a 20%, #ff8b00 80%);
+    border-radius: 20px 20px 10px 10px;
+    opacity: 0.6;
+    animation: floatLantern 10s linear infinite;
+    position: absolute;
+}
+
+
+.l1 { left: 20%; animation-delay: 0s; }
+.l2 { left: 50%; animation-delay: 3s; }
+.l3 { left: 75%; animation-delay: 6s; }
+
+
+@keyframes floatLantern {
+0% { transform: translateY(100vh) scale(0.8); }
+100% { transform: translateY(-10vh) scale(1.2); }
+}
