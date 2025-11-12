@@ -1,0 +1,518 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            height: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            position: sticky;
+            z-index: 1000;
+        }
+
+        .menu {
+            margin: 0;
+            padding: 0.5em;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .menu li {
+            font-size: 1.3rem;
+            display: inline-block;
+            text-transform: uppercase;
+            position: relative;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .menu li a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .menu li::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #fff, transparent);
+            transform: translateX(-50%);
+            transition: width 0.4s ease;
+        }
+
+        .menu li:hover::after {
+            width: 100%;
+        }
+
+        /* Секция Технологии (теперь первая) */
+        #tech {
+            min-height: 100vh;
+            padding: 100px 5% 50px;
+            background: rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            color: #e74c3c;
+            text-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+        }
+
+        .tech-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .tech-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.1) 0%, rgba(255, 107, 107, 0.05) 100%);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            border: 2px solid rgba(231, 76, 60, 0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(231, 76, 60, 0.1) 0%, transparent 70%);
+            transform: rotate(0deg);
+            transition: transform 0.8s ease;
+        }
+
+        .tech-card:hover::before {
+            transform: rotate(180deg);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            border-color: rgba(231, 76, 60, 0.6);
+            box-shadow: 0 20px 60px rgba(231, 76, 60, 0.4);
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            filter: grayscale(0.5);
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-card:hover .tech-icon {
+            filter: grayscale(0);
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .tech-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #ff6b6b;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-companies {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-companies p {
+            padding: 0.3rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover .tech-companies p {
+            padding-left: 10px;
+            color: #fff;
+        }
+
+        .tech-description {
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.2s;
+            position: relative;
+            z-index: 1;
+            font-size: 0.9rem;
+        }
+
+        .tech-card:hover .tech-description {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(231, 76, 60, 0.6);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Секция Прошлое (теперь вторая) */
+        #past {
+            min-height: 100vh;
+            padding: 100px 5% 50px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            height: 4px;
+            background: linear-gradient(90deg, #e74c3c 0%, #ff6b6b 100%);
+            box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+            z-index: 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+
+        .year-marker {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 0 40px rgba(231, 76, 60, 0.6);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .year-marker:hover {
+            transform: scale(1.3);
+            box-shadow: 0 0 60px rgba(231, 76, 60, 1);
+        }
+
+        .timeline-content {
+            position: absolute;
+            top: 100px;
+            width: 250px;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 2px solid rgba(231, 76, 60, 0.3);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 15;
+            transform: translateY(30px);
+        }
+
+        .timeline-item:hover .timeline-content {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #ff6b6b;
+        }
+
+        .timeline-content p {
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Секция Города */
+        #cities {
+            min-height: 100vh;
+            padding: 100px 5% 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cities-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 2rem 0;
+            scrollbar-width: thin;
+            scrollbar-color: #e74c3c rgba(255, 255, 255, 0.1);
+        }
+
+        .cities-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .cities-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .cities-container::-webkit-scrollbar-thumb {
+            background: #e74c3c;
+            border-radius: 10px;
+        }
+
+        .city-card {
+            position: relative;
+            min-width: 350px;
+            height: 500px;
+            border-radius: 25px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            flex-shrink: 0;
+        }
+
+        .city-card:hover {
+            transform: translateY(-20px) scale(1.05);
+            box-shadow: 0 25px 70px rgba(231, 76, 60, 0.5);
+        }
+
+        .city-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+            filter: brightness(0.8);
+        }
+
+        .city-card:hover .city-image {
+            transform: scale(1.15);
+            filter: brightness(0.6);
+        }
+
+        .city-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
+            padding: 2.5rem;
+            transform: translateY(60%);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .city-card:hover .city-overlay {
+            transform: translateY(0);
+        }
+
+        .city-overlay h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #ff6b6b;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .city-overlay p {
+            line-height: 1.8;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s 0.2s;
+        }
+
+        .city-card:hover .city-overlay p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animated-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(231, 76, 60, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .bg-circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .bg-circle:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .bg-circle:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            bottom: 10%;
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1) translate(0, 0);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.5) translate(20px, 20px);
+                opacity: 0.6;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                flex-wrap: wrap;
+                padding: 0.3em;
+            }
+
+            .menu li {
+                font-size: 1rem;
+                padding: 0.3rem 0.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 1rem;
+            }
+
+            .timeline {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                width: 4px;
+                height: 100%;
+                transform: translateX(-50%);
+            }
+
+            .timeline-content {
+                position: absolute;
+                top: 120px;
+                left: 50%;
+                transform: translateX(-50%) translateY(30px);
+                width: 280px;
+            }
+
+            .timeline-item:hover .timeline-content {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            .city-card {
+                min-width: 280px;
+            }
+        }
