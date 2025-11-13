@@ -39,10 +39,6 @@ h2 {
     padding-bottom: 2rem;
 }
 
-p {
-    line-height: 1.6em;
-}
-
 .menu {
     margin-top: 0;
     padding: 0.5em;
@@ -114,13 +110,14 @@ p {
 
 #tech {
     min-height: 100vh;
-    padding: 0 100px;
+    padding: 100px;
     background: rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
 }
 
 .section-title {
+    padding-top: 100px;
     text-align: center;
     font-size: 3rem;
 }
@@ -143,14 +140,13 @@ p {
     margin: auto;
     position: relative;
     font-size: 1.4rem;
-    /* border-top: 4px solid rgba(128, 204, 255, 0.7); */
-    border-top: 4px solid rgba(255, 128, 128, 0.7);
-    /* background: linear-gradient(180deg, rgba(128, 204, 255, 0.5) 0%, rgba(255, 255, 255, 0) 90%); */
-    background: linear-gradient(180deg, rgba(255, 128, 128, 0.4) 0%, rgba(255, 255, 255, 0) 90%);
-    padding: 30px 100px;
+    border-top: 4px solid rgba(128, 204, 255, 0.7);
+    background: linear-gradient(180deg, rgba(128, 204, 255, 0.5) 0%, rgba(255, 255, 255, 0) 85%);
+    padding: 20px 100px;
     margin-top: -200px;
     margin-bottom: 175px;
     line-height: 1.6;
+    color: #ffffff;
     text-align: center;
     z-index: 1;
 }
@@ -167,7 +163,7 @@ p {
 }
 
 .tech-grid:not(:hover) .tech-card {
-    opacity: 0.7;
+    opacity: 0.4;
     filter: blur(2px);
 }
 
@@ -187,12 +183,9 @@ p {
 }
 
 .tech-card:hover {
-    /* background: linear-gradient(135deg, rgba(201, 214, 255, 0.479) 0%, rgba(255, 107, 107, 0.05) 100%); */
-    background: linear-gradient(135deg, rgba(255, 224, 224, 0.4) 0%, rgba(255, 107, 107, 0.05) 100%);
-    /* border-color: rgba(194, 208, 255, 0.897); */
-    border-color: rgba(255, 160, 160, 0.8);
-    /* box-shadow: 0 20px 60px rgba(107, 154, 255, 0.911); */
-    box-shadow: 0 20px 60px rgba(255, 120, 120, 0.7);
+    background: linear-gradient(135deg, rgba(201, 214, 255, 0.479) 0%, rgba(255, 107, 107, 0.05) 100%);
+    border-color: rgba(194, 208, 255, 0.897);
+    box-shadow: 0 20px 60px rgba(107, 154, 255, 0.911);
     z-index: 10;
 }
 
@@ -218,18 +211,14 @@ p {
 .tech-card h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
-    /* color: #99ceff; */
-    color: #f46868;
-    /* text-shadow: 0 0 15px rgb(160, 201, 255); */
-    
+    color: #99ceff;
     text-align: center;
     position: relative;
     z-index: 1;
 }
 
 .tech-card:hover h3 {
-    /* text-shadow: 0 0 10px rgb(160, 201, 255); */
-    text-shadow: 0 0 15px rgb(202, 76, 76);
+    text-shadow: 0 0 10px rgb(160, 201, 255);
 }
 
 .tech-companies {
@@ -263,10 +252,9 @@ p {
     margin-left: 400px;
     padding-bottom: 6em;
     padding-left: 10px;
-    width: 35rem;
+    width: 25rem;
     height: 200px;
-    /* border-left: 3px solid rgb(128, 204, 255); */
-    border-left: 3px solid rgb(255, 128, 128);
+    border-left: 3px solid rgb(128, 204, 255);
     text-shadow: 5px 10px 10px rgb(0, 0, 0);
     opacity: 0;
     transform: scaleY(0%);
@@ -278,8 +266,7 @@ p {
 
 .tech-description::after {
     content: '';
-    /* background: linear-gradient(-90deg, rgba(128, 204, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%); */
-    background: linear-gradient(-90deg, rgba(255, 128, 128, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(-90deg, rgba(128, 204, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
     position: absolute;
     top: 0;
     margin-left: 50%;
@@ -300,7 +287,7 @@ p {
     position: relative;
     min-height: 100vh;
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
-    padding: 100px;
+    padding: 0px 100px;
 }
 
 .timeline {
@@ -319,8 +306,7 @@ p {
     width: 5px;
     border-radius: 2.5px;
     z-index: 5;
-    /* background: linear-gradient(180deg, rgba(128, 204, 255, 0.904) 0%, rgba(50, 122, 255, 0.877) 50%, rgba(38, 89, 185, 0) 100%); */
-    background: linear-gradient(180deg, rgba(255, 150, 150, 0.9) 0%, rgba(255, 100, 100, 0.85) 50%, rgba(185, 38, 38, 0) 100%);
+    background: linear-gradient(180deg, rgba(128, 204, 255, 0.904) 0%, rgba(50, 122, 255, 0.877) 50%, rgba(38, 89, 185, 0) 100%);
 }
 
 .timeline-item {
@@ -342,8 +328,7 @@ p {
     margin-left: 200px;
     height: 500px;
     z-index: 1;
-    /* background: linear-gradient(135deg, rgba(17, 29, 44, 0.425) 0%, rgba(57, 85, 161, 0.473) 100%); */
-    background: linear-gradient(135deg, rgba(44, 17, 17, 0.425) 0%, rgba(81, 50, 50, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(17, 29, 44, 0.425) 0%, rgba(57, 85, 161, 0.473) 100%);
     padding: 25px;
 }
 
@@ -355,10 +340,8 @@ p {
 .timeline-content h3 {
     font-size: 1.5em;
     margin: 0.5em 0 0.5em 1em;
-    /* color: #99ceff; */
-    color: #f46868;
-    /* text-shadow: 0 0 15px rgb(160, 201, 255); */
-    text-shadow: 0 0 15px rgb(202, 76, 76);
+    color: #99ceff;
+    text-shadow: 0 0 15px rgb(160, 201, 255);
 }
 
 .timeline-menu h2 {
@@ -377,8 +360,7 @@ p {
 .timeline-menu h2:hover {
     transform: scale(0.95);
     transform-origin: left;
-    /* text-shadow: 0 0 15px #99ceff; */
-    text-shadow: 0 0 15px #ffb3b3;
+    text-shadow: 0 0 15px #99ceff;
     transition: all 0.3s ease;
 }
 
@@ -392,10 +374,8 @@ p {
     margin-top: -10px;
     width: 5px;
     border-radius: 2.5px;
-    /* box-shadow: 0 0px 10px rgb(72, 167, 255); */
-    box-shadow: 0 0px 10px rgb(255, 120, 120);
-    /* background: linear-gradient(180deg, rgba(50, 122, 255, 0.877) 0%, rgba(128, 204, 255, 0.904) 100%); */
-    background: linear-gradient(180deg, rgba(255, 100, 100, 0.85) 0%, rgba(255, 150, 150, 0.9) 100%);
+    box-shadow: 0 0px 10px rgb(72, 167, 255);
+    background: linear-gradient(180deg, rgba(50, 122, 255, 0.877) 0%, rgba(128, 204, 255, 0.904) 100%);
     transform: translateX(12px);
 }
 
@@ -407,8 +387,7 @@ p {
     top: 0;
     right: 0;
     bottom: 0;
-    /* background: linear-gradient(90deg, rgba(50, 156, 255, 0.877) 0%, rgba(128, 204, 255, 0) 100%); */
-    background: linear-gradient(90deg, rgba(255, 100, 100, 0.8) 0%, rgba(255, 150, 150, 0) 100%);
+    background: linear-gradient(90deg, rgba(50, 156, 255, 0.877) 0%, rgba(128, 204, 255, 0) 100%);
     opacity: 0;
     transform: scaleX(0);
     transform-origin: left;
@@ -503,18 +482,13 @@ p {
     font-size: 1.2em;
 }
 
-.city-overlay h3 {
-    color: #f46868;
-    text-shadow: 0 0 15px rgb(202, 76, 76);
-}
-
 .divider {
     margin: 3em;
-    /* background: linear-gradient(-35deg, rgba(50, 122, 255, 0.877) 0%, rgba(128, 204, 255, 0.904) 100%); */
-    background: linear-gradient(-35deg, rgba(255, 100, 100, 0.85) 0%, rgba(255, 150, 150, 0.9) 100%);
-    /* box-shadow: 0 3px 10px rgb(72, 167, 255); */
-    box-shadow: 0 3px 10px rgb(255, 120, 120);
+    background: linear-gradient(-35deg, rgba(50, 122, 255, 0.877) 0%, rgba(128, 204, 255, 0.904) 100%);
+    box-shadow: 0 3px 10px rgb(72, 167, 255);
     height: 5px;
     width: 60em;
     border-radius: 2.5px;
 }
+
+
